@@ -25,28 +25,28 @@ var sessionId = generateSessionId({
 <table>
   <thead>
     <tr>
-      <th>Argument</th>
-      <th>Type</th>
-      <th>Description</th>
+      <th align="left">Argument</th>
+      <th align="left">Type</th>
+      <th align="left">Description</th>
     </tr>
   </thead>
   <tr>
-    <th align="left"><code>username</code></th>
+    <th align="left"><strong>username</strong></th>
     <td>String</td>
     <td><code>name</code> property of <code>\_users</code> doc</td>
   </tr>
   <tr>
-    <th align="left"><code>salt</code></th>
+    <th align="left"><strong>salt</strong></th>
     <td>String</td>
     <td><code>salt</code> property of <code>\_users</code> doc</td>
   </tr>
   <tr>
-    <th align="left"><code>secret</code></th>
+    <th align="left"><strong>secret</strong></th>
     <td>String</td>
     <td><code>couch_httpd_auth.secret</code> of CouchDB configuration</td>
   </tr>
   <tr>
-    <th align="left"><code>timestamp</code></th>
+    <th align="left"><strong>timestamp</strong></th>
     <td>Number</td>
     <td>Number of seconds elapsed since 1 January 1970 00:00:00 UTC</td>
   </tr>
