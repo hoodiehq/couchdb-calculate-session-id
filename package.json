@@ -28,5 +28,8 @@
     "nyc": "^5.0.0",
     "semantic-release": "^6.0.3",
     "tap": "^2.3.1"
+  },
+  "dependencies": {
+    "base64url": "^1.0.5"
   }
 }
