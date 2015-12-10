@@ -2,7 +2,7 @@ var test = require('tap').test
 
 var generateSessionId = require('../index')
 
-test('valid options', function (t) {
+test('valid arguments', function (t) {
   var expected = 'amFuOjU2Njg4MkI5OkEK3-1SRseo6yNRHfk-mmk6zOxm'
   var result = generateSessionId(
     'jan',
@@ -12,6 +12,22 @@ test('valid options', function (t) {
   )
 
   t.is(result, expected, 'returns expected result')
+
+  t.end()
+})
+
+test('invalid arguments', function (t) {
+  t.throws(generateSessionId, {code: 'EMISSINGARG'}, 'missing arguments')
+  t.throws(generateSessionId.bind(null, '1', '2', '3', 4, 5), {code: 'ETOOMANYARGS'}, 'too many arguments')
+
+  t.test('types', function (tt) {
+    tt.throws(generateSessionId.bind(null, 1, '2', '3', 4), {code: 'EINVALIDTYPE'})
+    tt.throws(generateSessionId.bind(null, '1', 2, '3', 4), {code: 'EINVALIDTYPE'})
+    tt.throws(generateSessionId.bind(null, '1', '2', 3, 4), {code: 'EINVALIDTYPE'})
+    tt.throws(generateSessionId.bind(null, '1', '2', '3', '4'), {code: 'EINVALIDTYPE'})
+
+    tt.end()
+  })
 
   t.end()
 })
