@@ -25,7 +25,7 @@
   "homepage": "https://github.com/hoodiehq/couchdb-generate-session-id#readme",
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "nyc": "^4.0.1",
+    "nyc": "^5.0.0",
     "semantic-release": "^6.0.3",
     "tap": "^2.3.1"
   }
