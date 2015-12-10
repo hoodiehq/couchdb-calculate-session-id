@@ -64,7 +64,7 @@ make_cookie_hash(UserName, Secret, TimeStamp) ->
 ## Credits
 
 All credits due to [@christophwitzko](https://twitter.com/christophwitzko),
-[@intutny](https://twitter.com/indutny) & [@janl](https://twitter.com/janl):
+[@indutny](https://twitter.com/indutny) & [@janl](https://twitter.com/janl):
 https://gist.github.com/janl/4583f5eb4c0d8216cc5f
 
 ## License
