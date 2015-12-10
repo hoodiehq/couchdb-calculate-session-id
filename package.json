@@ -30,6 +30,7 @@
     "tap": "^2.3.1"
   },
   "dependencies": {
+    "aproba": "^1.0.1",
     "base64url": "^1.0.5"
   }
 }
