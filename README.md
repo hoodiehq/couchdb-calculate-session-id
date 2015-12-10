@@ -12,15 +12,15 @@
 ```js
 var generateSessionId = require('couchdb-generate-session-id')
 
-var sessionId = generateSessionId({
-  username: 'pat',
-  salt: '24eb90e9e1343977b8323857287ffca4',
-  secret: '78875068a1979fb910d5d8f37d316aa4'
-  timestamp: 1449689785
-})
+var sessionId = generateSessionId(
+  'pat',
+  '24eb90e9e1343977b8323857287ffca4',
+  '78875068a1979fb910d5d8f37d316aa4',
+  1449689785
+)
 ```
 
-## Options
+## Arguments
 
 <table>
   <thead>
