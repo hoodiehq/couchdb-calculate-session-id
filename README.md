@@ -36,12 +36,12 @@ var sessionId = generateSessionId(
     <td><code>name</code> property of <code>\_users</code> doc</td>
   </tr>
   <tr>
-    <th align="left"><strong>salt</strong></th>
+    <th align="left"><strong>usersalt</strong></th>
     <td>String</td>
     <td><code>salt</code> property of <code>\_users</code> doc</td>
   </tr>
   <tr>
-    <th align="left"><strong>secret</strong></th>
+    <th align="left"><strong>serversecret</strong></th>
     <td>String</td>
     <td><code>couch_httpd_auth.secret</code> of CouchDB configuration</td>
   </tr>
