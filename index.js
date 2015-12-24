@@ -10,7 +10,7 @@ function calculateSessionId (username, usersalt, serversecret, timestamp) {
 
   var timestamp16 = timestamp.toString(16).toUpperCase()
   var sessionData = username + ':' + timestamp16
-  var hmac = crypto.createHmac('sha1', usersalt + serversecret).update(sessionData)
+  var hmac = crypto.createHmac('sha1', serversecret + usersalt).update(sessionData)
 
   return base64url(Buffer.concat([
     new Buffer(sessionData + ':'),
