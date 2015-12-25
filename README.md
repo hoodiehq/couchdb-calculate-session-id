@@ -11,12 +11,16 @@
 
 ```js
 var calculateSessionId = require('couchdb-calculate-session-id')
+var username = 'pat'
+var usersalt = '24eb90e9e1343977b8323857287ffca4'
+var serversecret = '78875068a1979fb910d5d8f37d316aa4'
+var timestamp = 1449689785
 
 var sessionId = calculateSessionId(
-  'pat',
-  '24eb90e9e1343977b8323857287ffca4',
-  '78875068a1979fb910d5d8f37d316aa4',
-  1449689785
+  serversecret,
+  username,
+  usersalt,
+  timestamp
 )
 ```
 
@@ -31,6 +35,11 @@ var sessionId = calculateSessionId(
     </tr>
   </thead>
   <tr>
+    <th align="left"><strong>serversecret</strong></th>
+    <td>String</td>
+    <td><code>couch_httpd_auth.secret</code> of CouchDB configuration</td>
+  </tr>
+  <tr>
     <th align="left"><strong>username</strong></th>
     <td>String</td>
     <td><code>name</code> property of <code>\_users</code> doc</td>
@@ -39,11 +48,6 @@ var sessionId = calculateSessionId(
     <th align="left"><strong>usersalt</strong></th>
     <td>String</td>
     <td><code>salt</code> property of <code>\_users</code> doc</td>
-  </tr>
-  <tr>
-    <th align="left"><strong>serversecret</strong></th>
-    <td>String</td>
-    <td><code>couch_httpd_auth.secret</code> of CouchDB configuration</td>
   </tr>
   <tr>
     <th align="left"><strong>timestamp</strong></th>
@@ -64,7 +68,8 @@ make_cookie_hash(UserName, Secret, TimeStamp) ->
 ## Credits
 
 All credits due to [@christophwitzko](https://twitter.com/christophwitzko),
-[@indutny](https://twitter.com/indutny) & [@janl](https://twitter.com/janl):
+[@indutny](https://twitter.com/indutny), [@janl](https://twitter.com/janl)
+and [@kxepal](https://twitter.com/kxepal):
 https://gist.github.com/janl/4583f5eb4c0d8216cc5f
 
 ## License
