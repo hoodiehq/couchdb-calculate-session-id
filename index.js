@@ -5,7 +5,7 @@ var crypto = require('crypto')
 var base64url = require('base64url')
 var validate = require('aproba')
 
-function calculateSessionId (username, usersalt, serversecret, timestamp) {
+function calculateSessionId (serversecret, username, usersalt, timestamp) {
   validate('SSSN', arguments)
 
   var timestamp16 = timestamp.toString(16).toUpperCase()
