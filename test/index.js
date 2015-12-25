@@ -9,9 +9,9 @@ test('valid arguments CouchDB 1.5', function (t) {
   var serversecret = '4ed13457964f05535fbb54c0e9f77a83'
   var timestamp = 1449689785
   var result = calculateSessionId(
+    serversecret,
     username,
     usersalt,
-    serversecret,
     timestamp
   )
 
@@ -28,9 +28,9 @@ test('valid arguments CouchDB 1.6.1', function (t) {
   var timestamp = 1450973041
 
   var result = calculateSessionId(
+    serversecret,
     username,
     usersalt,
-    serversecret,
     timestamp
   )
 
