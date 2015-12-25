@@ -1,6 +1,6 @@
 var test = require('tap').test
 
-var calculateSessionId = require('../index')
+var calculateSessionId = require('../')
 
 test('valid arguments CouchDB 1.5', function (t) {
   var expectedSessionId = 'amFuOjU2Njg4MkI5OkEK3-1SRseo6yNRHfk-mmk6zOxm'
