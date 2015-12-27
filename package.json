@@ -5,7 +5,9 @@
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pertest": "standard",
-    "test": "nyc tap --no-cov test/index.js",
+    "test": "nyc tap --no-cov tests/index.js",
+    "test:browser:local": "zuul --local 8080 -- tests",
+    "test:browser:cloud": "zuul -- tests",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "postsemantic-release": "npm run coverage"
   },
@@ -25,9 +27,11 @@
   "homepage": "https://github.com/hoodiehq/couchdb-calculate-session-id#readme",
   "devDependencies": {
     "coveralls": "^2.11.4",
+    "hoodie-zuul-config": "^2.0.0",
     "nyc": "^5.0.0",
     "semantic-release": "^6.0.3",
-    "tap": "^2.3.1"
+    "tap": "^2.3.1",
+    "zuul": "^3.8.0"
   },
   "dependencies": {
     "aproba": "^1.0.1",
