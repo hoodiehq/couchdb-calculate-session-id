@@ -3,11 +3,14 @@
   "description": "calculates valid CouchDB session IDs using username, salt, secret & timestamp",
   "main": "lib/index.js",
   "scripts": {
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pertest": "standard",
-    "test": "nyc tap --no-cov test/index.js",
+    "test": "tape tests/index.js",
+    "test:browser:local": "zuul --local 8080 -- tests",
+    "test:browser:cloud": "zuul -- tests",
+    "test:coverage": "istanbul cover tests",
+    "test:coverage:upload": "istanbul-coveralls",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "postsemantic-release": "npm run coverage"
+    "postsemantic-release": "npm run test:coverage && npm run test:coverage:upload"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,12 @@
   "homepage": "https://github.com/hoodiehq/couchdb-calculate-session-id#readme",
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "nyc": "^5.0.0",
+    "hoodie-zuul-config": "^2.0.0",
+    "istanbul": "^0.4.1",
+    "istanbul-coveralls": "^1.0.3",
     "semantic-release": "^6.0.3",
-    "tap": "^2.3.1"
+    "tape": "^4.4.0",
+    "zuul": "^3.7.3"
   },
   "dependencies": {
     "aproba": "^1.0.1",
