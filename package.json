@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "aproba": "^1.0.1",
-    "base64url": "^1.0.5",
+    "base64url": "^2.0.0",
     "crypto-lite": "^0.1.0"
   },
   "browser": {
