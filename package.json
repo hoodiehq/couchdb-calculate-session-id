@@ -33,7 +33,7 @@
     "istanbul-coveralls": "^1.0.3",
     "semantic-release": "^6.0.3",
     "tape": "^4.4.0",
-    "zuul": "^3.7.3"
+    "zuul": "^3.11.0"
   },
   "dependencies": {
     "aproba": "^1.0.1",
