@@ -38,7 +38,7 @@
   "dependencies": {
     "aproba": "^1.0.1",
     "base64url": "^2.0.0",
-    "crypto-lite": "^0.1.0"
+    "crypto-lite": "^0.2.0"
   },
   "browser": {
     "./lib/hmac.js": "./lib/hmac-browser.js"
