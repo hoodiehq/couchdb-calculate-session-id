@@ -31,7 +31,7 @@
     "hoodie-zuul-config": "^2.0.0",
     "istanbul": "^0.4.1",
     "istanbul-coveralls": "^1.0.3",
-    "semantic-release": "^7.0.1",
+    "semantic-release": "^8.0.0",
     "tape": "^4.4.0",
     "zuul": "^3.7.3"
   },
