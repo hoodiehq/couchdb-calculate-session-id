@@ -15,12 +15,6 @@ branches:
   only:
     - master
     - /^greenkeeper.*$/
-    
-script: npm run $COMMAND
-env:
-  matrix:
-  - COMMAND=test
-  - COMMAND=test:browser:cloud
 
 jobs:
   include:
